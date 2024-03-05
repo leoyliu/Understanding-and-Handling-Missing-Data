@@ -1,0 +1,78 @@
+---
+title: "Understanding and Handling Missing Data"
+author: 
+  - Yuanyi (Leo) Liu
+thanks: "The essay is available at: https://github.com/leoyliu/Understanding-and-Handling-Missing-Data."
+date: today
+date-format: long
+format: pdf
+toc: false
+number-sections: true
+---
+
+# Understanding and Handling Missing Data
+
+Missing data is a prevalent issue in various research fields, affecting the analysis and interpretation of results. This essay explores the nature of missing data, its implications, and strategies for handling it.
+
+## What is Missing Data?
+
+Missing data occurs when no data value is stored for the variable in an observation. It's a common issue in research and data analysis across various fields, including social sciences, healthcare, and economics. Missing data can arise due to a multitude of reasons, such as non-response in surveys, lost records, errors in data collection or entry, and equipment malfunction. The presence of missing data can significantly impact the analysis, interpretation, and conclusions of a study. Therefore, understanding the nature of missing data and employing appropriate strategies to handle it is crucial for researchers and data analysts.
+
+### Types of Missing Data
+
+There are three primary types of missing data, classified based on their mechanism of missingness:
+
+1. **Missing Completely at Random (MCAR)**
+The probability of missingness is the same for all observations. Here, the missingness of data is unrelated to any study or measurement variables. For example, suppose that in a survey measuring stress levels among college students, some responses are missing due to participants accidentally skipping questions. These missing values have no relationship with the dataset's observed or missing data (Updated according to the feedback from Emma).
+
+2. **Missing at Random (MAR)**
+The probability of missingness is not the same for all observations but is related to some of the observed data. In MAR, the missingness can be explained by other variables in the dataset. For instance, if younger individuals are less likely to respond to a survey question on retirement plans, their missingness can be explained by the age variable, which is observed.
+
+3. **Missing Not at Random (MNAR)**
+The probability of missingness is related to the unobserved data, meaning the reason for missingness is related to the missing data itself. For example, in a salary survey, higher earners are more likely to refrain from disclosing their income. Here, the missingness (non-disclosure) is related to the income level itself, which is unobserved (Updated according to the feedback from Emma).
+
+### Implications of Missing Data
+
+The presence of missing data can lead to various issues in data analysis, including:
+
+- **Bias:** Missing data can introduce bias into the estimation of parameters, leading to invalid conclusions.
+- **Loss of Efficiency:** The statistical power of the study can decrease due to the reduction in the sample size.
+- **Complications in Analysis:** Handling missing data can complicate the analysis process, requiring more sophisticated statistical methods.
+
+## What Should You Do About Missing Data?
+
+The approach to handling missing data depends on its type and the extent of missingness. Here are some strategies to deal with missing data:
+
+### 1. Deletion Methods
+
+- **Listwise Deletion:** Removes all data for an observation that has one or more missing values. While simple, it can lead to a significant reduction in sample size and is only unbiased under MCAR.
+- **Pairwise Deletion:** Uses all available data to compute statistical estimates, ignoring missing values. This method can be more efficient than listwise deletion but can lead to inconsistencies.
+
+### 2. Imputation Methods
+
+- **Mean/Median/Mode Imputation:** Replaces missing values with the mean, median, or mode of the observed data. This method is straightforward but can underestimate variability and lead to biased estimates.
+- **Multiple Imputation:** Involves creating multiple complete datasets by imputing missing values based on a distribution, analyzing each dataset separately, and then pooling the results. It accounts for the uncertainty of the missing data and is preferable under MAR conditions (Updated according to the feedback from Emma).
+- **K-Nearest Neighbors (KNN) Imputation:** Replaces missing values with the mean or median of the nearest neighbors identified in the dataset. It's more sophisticated and can handle complex data structures better than simple imputation methods (Updated according to the feedback from Emma).
+
+### 3. Model-Based Methods
+
+- **Maximum Likelihood Estimation (MLE):** Provides estimates by maximizing the likelihood function, assuming a distribution for the data. It can produce unbiased estimates under MAR but requires assumptions about the data distribution.
+- **Bayesian Methods:** Involves specifying a prior distribution and updating it with the observed data to handle missingness. It is flexible and can incorporate uncertainty about the missing data mechanism.
+
+## Conclusion
+
+Handling missing data is an essential aspect of data analysis, requiring careful consideration of the missing data mechanism and the potential impact on the study's findings. Choosing an appropriate method to deal with missing data can enhance the validity and reliability of the results. It's also important to conduct sensitivity analyses to assess how conclusions might change under different assumptions about the missing data. Ultimately, the best approach depends on the specific context of the research, including the nature of the data, the extent of missingness, and the goals of the analysis.
+
+\newpage
+
+# Feedback from Emma Teng
+
+After reviewing your essay on "what is missing data and what should you do about it?", here are some feedback for improvement:
+
+1. **Clarify Types of Missing Data:** Improve the explanation of missing data types (MCAR, MAR, MNAR) with clear, relatable examples. This will help readers better understand these concepts and how they impact data analysis.
+
+2. **Detail Handling Techniques:** Provide more detailed descriptions of the techniques for handling missing data, including their advantages and limitations. This could help readers make informed decisions on which method to use in their specific situations.
+
+3. **Expand on Practical Applications:** Incorporate examples or case studies demonstrating how missing data was handled in real research scenarios. This practical application can offer valuable insights and underscore the importance of correctly addressing missing data.
+
+These focused improvements could enhance the depth, clarity, and applicability of your essay, making it a more valuable resource for readers interested in data analysis and research methodologies.
